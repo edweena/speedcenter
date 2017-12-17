@@ -4,7 +4,6 @@
 //
 //-----------------------------------------
 const path = require('path')
-const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
@@ -15,10 +14,12 @@ module.exports = {
     filename: 'js/bundle.js'
   },
 
-  plugins: [new HtmlWebpackPlugin({
-    filename: 'index.html',
-    template: 'src/html/template.html'
-  })],
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'src/html/template.html'
+    })
+  ],
 
   module: {
     loaders: [
