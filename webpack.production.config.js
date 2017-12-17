@@ -5,6 +5,7 @@
 //-----------------------------------------
 const path = require('path')
 const webpack = require('webpack')
+const autoprefixer = require('autoprefixer')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
@@ -45,7 +46,7 @@ module.exports = {
 
     new SWPrecacheWebpackPlugin(
       {
-        cacheId: 'bpm-bpm',
+        cacheId: 'speed-center',
         filename: 'service-worker.js',
         minifiy: true
       }
@@ -76,7 +77,7 @@ module.exports = {
       },
 
       s3UploadOptions: {
-        Bucket: 'bpmbpm'
+        Bucket: 'thespeed.center'
       }
     })
   ],
