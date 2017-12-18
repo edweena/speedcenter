@@ -38,7 +38,7 @@ module.exports = {
       }
     }),
 
-    new UglifyJSPlugin(),
+    new UglifyJSPlugin({uglifyOptions: {mangle: true}}),
 
     new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.optimize.ModuleConcatenationPlugin(),
@@ -54,11 +54,13 @@ module.exports = {
 
     new WebpackPwaManifest({
       name: 's p e e d c e n t e r',
-      short_name: 's p e e d c e n t e r',
-      description: 'this tells you how fast it is',
+      short_name: 'speedcenter',
+      description: 'a very simple bpm counter',
       background_color: '#ffffff',
       theme_color: '#000000',
-      start_url: '/',
+      orientation: "portrait",
+      display: "fullscreen",
+      start_url: '/index.html',
       filename: 'manifest.json',
       icons: [
         {

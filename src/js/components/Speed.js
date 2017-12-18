@@ -1,4 +1,4 @@
-export default class BPM {
+export default class Speed {
 
   constructor(resetCallback){
     this.resetCallback = resetCallback

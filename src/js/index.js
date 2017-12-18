@@ -5,7 +5,7 @@
 //----------------------------------
 
 import FastClick from 'fastclick'
-import BPM from './components/BPM'
+import Speed from './components/Speed'
 import '../css/index.css'
 
 
@@ -26,7 +26,7 @@ function calc(b){
 function start(){
 
   //new counter
-  const b = new BPM(resetCallback)
+  const b = new Speed(resetCallback)
 
   //make clicks fast
   FastClick.attach(document.body)
